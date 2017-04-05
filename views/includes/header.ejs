@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<% include ./head.ejs %>
+	<style>
+		p {
+			color: #ffffff;
+		}
+	</style>	
+</head>
+
+<body>
+	<div class="header-bot" style="width: 100%; background:#3c99d3; overflow:hidden; margin-left: auto; margin-right: auto;">
+		<div style="width:100%; height:90px; margin:auto;">
+			<div style="float:left; margin-top:26px; overflow:hidden; font-size:17px;">
+				<p style="margin-left: 20px;">
+					<a class="linkStyle" href="/" style="text-decoration: none; color: #ffffff;">主 页</a>
+					<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+					<a class="linkStyle" href="/topGoods" style="text-decoration: none; color: #ffffff;">Top 商品榜</a>
+				</p>
+				<% if (user && user.username != 'admin') {%>
+					<p class="navbar-text navbar-left" style="margin-left: 20px;">
+						<span class="" style="text-decoration: none; color: #ffffff;"> 欢迎 , <%= user.username %></span>
+						<button class="" style="background: #ffffff; color: #367fac; border: 0px; margin-left: 0px; margin-top: 4px;" id="logout">注 销</button>
+					</p>
+				<% } %>
+				<% if (user && user.username == 'admin') {%>
+					<p class="navbar-text navbar-left" style="margin-left: 20px;">
+						<span class="">欢迎管理员</span> <a href="/admin" class="" style="text-decoration: none; color: #ffffff;"><%= user.username %></a>
+						<button class="" style="background: #ffffff; color: #367fac; border: 0px; margin-left: 0px; margin-top: 4px;" id="logout">注 销</button>
+					</p>
+				<% } %>
+				<% if (!user) {%>
+					<p class="navbar-text" style="margin-left: 20px;">
+						<!--<a href="/users/signup" style="text-decoration: none; color: #ffffff;">注 册</a>
+						<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>-->
+						<a href="/users/signin" style="text-decoration: none; color: #ffffff;">登 录</a>
+					</p>
+				<% } %>
+			</div>
+			<script>
+				$('#logout').click(function(e) {
+					$.ajax({
+						url: '/users/logout',
+						type: 'get',
+						success: function(data) {
+							window.location.href = "/users/signin"
+						}
+					})
+				})
+			</script>
+		</div>
+	</div>
+</body>
+
+<script>
+
+	$('#logout').click(function(e) {
+        $.ajax({
+            url: '/users/logout',
+            type: 'get',
+			success: function(data) {
+				window.location.href = "/users/signin"
+			}
+		})
+	})
+</script>
+
+</html>

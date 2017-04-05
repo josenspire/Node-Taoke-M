@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gifty Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./javascripts/bootstrap.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<link rel="stylesheet" href="css/etalage.css">
+<script src="js/jquery.etalage.min.js"></script>	<
+
+<script>
+    jQuery(document).ready(function($){
+	    $('#etalage').etalage({
+			thumb_image_width: 300,
+			thumb_image_height: 400,
+			source_image_width: 900,
+			source_image_height: 1200,
+			show_hint: true,
+			click_callback: function(image_anchor, instance_id){
+			    alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+            }
+		});
+    });
+</script>
+</head>
+<body>
+
+<% include ./myHeader.ejs %>
+
+
+<div class="men">
+	<div class="container">
+	  <div class="single_top">
+	       <div class="col-md-9 single_right">
+               <div class="grid images_3_of_2">
+					<ul id="etalage">
+						<% data.pics.forEach(function(item, index) {%>
+							<li>
+								<img class="etalage_thumb_image" style="min-width: 290px;" src="<%= item %>" class="img-responsive" />
+								<img class="etalage_source_image" src="<%= item %>" class="img-responsive" title="" />
+							</li>
+						<% }) %>
+							<!--<li>
+								<img class="etalage_thumb_image" src="images/s2.jpg" class="img-responsive" />
+								<img class="etalage_source_image" src="images/s2.jpg" class="img-responsive" title="" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="images/s3.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="images/s3.jpg"class="img-responsive"  />
+							</li>
+						    <li>
+								<img class="etalage_thumb_image" src="images/s4.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="images/s4.jpg"class="img-responsive"  />
+							</li>-->
+					</ul>
+					<div class="clearfix"></div>
+               </div>
+			   <div class="desc1 span_3_of_2">
+                 <h1><%= data.detail.D_title %></h1>
+                    <p class="m_text2" style="color: #e05a5a; ">推荐理由：<%= data.detail.Introduce %></p>
+                    
+                    <p style="margin-top: 1rem;">券后：￥<span style="font-size: 1.6rem; color: #e05a5a;"><%= data.detail.Price %> </span> <span style="margin-left: 2rem;  text-decoration:line-through;">原价：<%= data.detail.Org_Price %></span></p>
+                    <br>
+					<p class="m_link">佣金 <span style="font-size: 1.4rem; color: #e05a5a;"><%= data.detail.Commission %>%</span></p>
+                    <br>
+					<span class="m_link">券链接 <a href="<%= data.detail.Quan_m_link %>" target="_blank"><%= data.detail.Quan_m_link %></a></span>
+					<br>
+					<br>
+					<span class="m_link">商品链接 <a href="https://item.taobao.com/item.htm?id=<%= data.detail.GoodsID %>" target="_blank">https://item.taobao.com/item.htm?id=<%= data.detail.GoodsID %></a></span>
+					<p style=" background: #e05a5a; color: #eeeeee; padding: 10px 10px; width: 130px; font-size: 1rem; margin-top: 1rem;"><font size="0.6rem">优惠券</font> &nbsp;&nbsp;￥<%= data.detail.Quan_price %></p>
+                    <div class="btn_form">
+						<form>
+							<input type="button" id="createBtn" onclick="createTkl()" value="领券购买" title="">
+							<!--<input type="button" onclick="createTkl()" style="margin-left: 1rem;" value="重新查看" title="">-->
+	  						<a id="tklModal" href="#resultDialog" data-toggle="modal" hidden="true" >再次查看</a>
+						</form>
+					 </div>
+	
+					 <p class="m_text2">
+						 默默地递给你一朵小花，愿它带给你一片盎然的春意！</p>
+					 <p class="m_text2">
+						 愿灿烂的阳光，青春的活力，秀美的容貌，舒心的微笑永远属于你！
+					</p>
+					 <!--<p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p>-->
+			   </div>
+			   <div class="clearfix"></div>	
+       </div>
+
+      <div class="clearfix"> </div>
+
+	  <!-- 口令内容 -->
+	  <div class="col-md-12 column">
+		<div class="modal fade" id="resultDialog" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myModalLabel" style="color: #000">
+							您的淘口令是:
+						</h4>
+					</div>
+					<div class="modal-body" style="color: #000;" id="tklContent"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </div>
+     </div>
+    <!--<div class="toogle">
+     	<h2>Product Details</h2>
+     	<p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>
+     </div>
+     <div class="toogle">
+     	<h2>More Information</h2>
+     	<p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+     </div>-->
+
+     <!--<h4 class="head_single">Related Products</h4>
+     <div class="span_3">
+	    <div class="col-sm-3 grid_1">
+            <a href="single.html">
+                <img src="images/pic9.jpg" class="img-responsive" alt=""/>
+                <h3>parum clari</h3>
+                <p>Duis autem vel eum iriure</p>
+                <h4>Rs.399</h4>
+            </a>  
+		</div> 
+		<div class="col-sm-3 grid_1">
+	        <a href="single.html">
+			    <img src="images/pic8.jpg" class="img-responsive" alt=""/>
+			    <h3>parum clari</h3>
+				<p>Duis autem vel eum iriure</p>
+				<h4>Rs.399</h4>
+			</a>  
+		</div> 
+		<div class="col-sm-3 grid_1">
+	        <a href="single.html">
+			    <img src="images/pic1.jpg" class="img-responsive" alt=""/>
+				<h3>parum clari</h3>
+				<p>Duis autem vel eum iriure</p>
+				<h4>Rs.399</h4>
+			</a>  
+		</div> 
+		<div class="col-sm-3 grid_1">
+	        <a href="single.html">
+			    <img src="images/pic3.jpg" class="img-responsive" alt=""/>
+				<h3>parum clari</h3>
+				<p>Duis autem vel eum iriure</p>
+				<h4>Rs.399</h4>
+		    </a>  
+		</div> 
+		<div class="clearfix"></div>
+	 </div>-->
+    </div>
+</div>
+<% include ./myFooter.ejs %>
+
+<link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+<script defer src="js/jquery.flexslider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+
+<script>
+	var clipboard = new Clipboard('#copy');
+    clipboard.on('success', function(e) {
+    	console.log(e)
+		$('#copyStatus').show()
+    })
+    clipboard.on('error', function(e) {
+    	console.log(e);
+		$('#copyStatus').show()
+		$('#copyStatus').text('复制失败，请手动选中文本内容复制')
+    })
+</script>
+
+<script type="text/javascript">
+	$(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        })
+    })
+	
+
+	function createTkl() {
+		$('#createBtn').attr('disabled', true)
+
+		$.ajax({
+			type: 'post',
+			url: '/taoke/tkl',
+			cache: true,
+			data: {
+				'GoodsID': '<%= data.detail.GoodsID %>',
+				'Quan_id': '<%= data.detail.Quan_id %>',
+				'Jihua_link': '<%= data.detail.Jihua_link %>'
+			},
+			success: function (result) {
+				$('#createBtn').attr('disabled', false)
+
+				if (result.status === 'SUCCESS') {
+					console.log(result.data)
+					var value = '<div id="copyContent"><img style="width:220px; height:220px; float: inherit;" src="<%= data.detail.Pic %>"/> <br/><br/> <span style="color: #000;"><%= data.detail.D_title %></span><br/> <span style="color: #000;"> <%= data.detail.Introduce %></span><br/><span style="color: #000;">【券后价 <%= data.detail.Price %>】    【在售价 <%= data.detail.Org_Price %>】</span><br/><br/>复制此段消息，打开手机淘宝，即可领券购买：' + result.data.model + '</div><br/><br/><button class="btn btn-danger" id="copy" data-clipboard-target="#copyContent">一键复制</button><br><p id="copyStatus" style="color: #8f8f8f; display: none;">*复制成功,如手机端无法正常复制粘贴，请长按选中复制</p>'
+					$('#tklContent').html(value.replace(/\r?\n/g, "<br/>"))
+				} else if (result.status === 'ERROR') {
+					switch (result.message) {
+						case 'USER_UN_LOGIN':
+							window.location.href = '/users/signin'
+							return 
+						case 'SERVER_UNKNOW_ERROR':
+							$('#tklContent').text('服务器开小差了T T，请稍后重试一下哦！')
+							break
+						case 'GET_GOODS_DETAIL_ERROR':
+							$('#tklContent').text('获取口令失败了T T，产品似乎下架了哦！')
+							break
+						case 'ACCOUNT_USE_UP':
+							$('#tklContent').text('口令次数达到上限啦，请联系管理员！')
+							break
+						case 'TKL_TIMES_OUT': 
+							$('#tklContent').text('口令次数达到上限啦，请联系管理员！')
+							break
+					}
+				}
+				$('#tklModal').click()
+			},
+			error: function () {
+				$('#tklContent').text('出错啦，产品似乎下架了哦T T.')
+				$('#tklModal').click()
+				$('#createBtn').attr('disabled', false)
+			}
+		})
+	}
+</script>
+
+</body>
+</html>		

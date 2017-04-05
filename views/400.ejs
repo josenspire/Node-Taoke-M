@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>404</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gifty Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<link rel="stylesheet" href="css/etalage.css">
+</head>
+<body>
+
+<% include ./myHeader %>
+
+<div class="men">
+	<div class="container">
+	    <div class="error-404 text-center">
+			<h1>404</h1>
+			<p>this link dead link</p>
+			<a class="b-home" href="/">返回首页</a>
+		 </div>
+      </div>
+</div>
+
+<% include ./myFooter 
+%>
+<link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(function(){
+	    SyntaxHighlighter.all();
+    })
+	$(window).load(function(){
+	    $('.flexslider').flexslider({
+		    animation: "slide",
+			start: function(slider){
+			    $('body').removeClass('loading');
+			}
+		});
+	});
+</script>
+
+</body>
+</html>		

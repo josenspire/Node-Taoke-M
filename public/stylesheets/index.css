@@ -1,0 +1,169 @@
+.Arial_num {
+    font-family: Arial;
+}
+
+.quan_ajax_cid_off {
+    color: #777777;
+    margin-right: 14px;
+}
+
+.quan_ajax_cid_off:hover {
+    text-decoration: underline;
+    color: #EF4929;
+}
+
+.quan_ajax_cid_on {
+    color: #EF4929;
+    margin-right: 14px;
+}
+
+.quan_page {
+    overflow: hidden;
+    width: 700px;
+    margin: auto;
+    font-size: 14px;
+    color: #666666;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.quan_page div {
+    margin-right: 15px;
+}
+
+.quan_page a {
+    margin-right: 15px;
+}
+
+.quan_page .page_total {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page .page_index {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page .page_ref {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page a {
+    float: left;
+    padding: 5px;
+    border: solid #94C9E8 1px;
+    color: #71B4DC
+}
+
+.quan_page a:hover {
+    float: left;
+    padding: 5px;
+    border: solid #94C9E8 1px;
+    color: #FFFFFF;
+    background: #59A4D1
+}
+
+.quan_page .page_next {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page .page_end {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page .page_ci {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page .page_jump {
+    float: left;
+    padding: 5px;
+    border: solid #CCCCCC 1px;
+}
+
+.quan_page select {
+    float: left;
+    height: 32px;
+    color: #666666;
+}
+
+.top_nav {
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.top_nav a {
+    color: #FF6666;
+}
+
+.select_yes {
+    background: #FF6666;
+    color: #FFFFFF;
+}
+
+.select_yes a {
+    color: #FFFFFF
+}
+
+.quan_selc_nav {
+    float: left;
+    color: #8C8C8C;
+    margin-left: 7px;
+}
+
+.quan_selc_icon {
+    float: left;
+    background-position: 0px 0px;
+    width: 13px;
+    height: 13px;
+    margin-top: 11px;
+}
+
+.quan_selc_icon_yes {
+    float: left;
+    background-position: 0px 13px;
+    width: 13px;
+    height: 13px;
+    margin-top: 11px;
+}
+
+.quan_selc:hover .quan_selc_nav {
+    color: #FF6666;
+}
+
+.quan_selc:hover .quan_selc_icon {
+    background-position: 0px 13px
+}
+
+.create_my_sea_bq {
+    color: #F1AFAF;
+    cursor: pointer;
+}
+
+.create_my_sea_bq:hover {
+    color: #E85757;
+}
+
+.my_bq_off {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #68A5CC
+}
+
+.my_bq_on {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #EF4929
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title><%= title %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gifty Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="js/jquery.easydropdown.js"></script>
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: false,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+</script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/script.js"></script>
+</head>
+
+<body>
+
+<% include ./myHeader.ejs %>
+
+<div class="menu">
+	<div class="container">
+		<div class="menu_box">
+	     <ul class="megamenu skyblue">
+			<li class="grid"><a class="color2" href="/">首页</a></li>
+			<li><a class="color4" href="/topGoods">Top精选</a></li>				
+			<li class="active"><a class="color3" href="/currentGoods">实时跑量</a></li>
+			<li><a class="color7" href="#">热门点击</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>WOMEN</h4>
+								<ul>
+									<li><a href="/search?content=女装">女装</a></li>
+									<li><a href="/search?content=内衣">内衣</a></li>
+									<li><a href="/search?content=内衣">化妆品</a></li>
+									<li><a href="/search?content=配饰">配饰</a></li>
+									<li><a href="/search?content=女鞋">女鞋</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>MAN</h4>
+								<ul>
+									<li><a href="/search?content=男装">男装</a></li>
+									<li><a href="/search?content=内裤">内裤</a></li>
+									<li><a href="/search?content=男鞋">男鞋</a></li>
+									<li><a href="/search?content=剃须刀">剃须刀</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col2">
+							<div class="h_nav">
+								<h4>NORMAL</h4>
+								<ul>
+									<li class>
+										<div class="p_left">
+										   <img style="width: 50px; height: 50px;" src="images/riyong.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="/search?content=日用品">日用品</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+									<li>
+										<div class="p_left">
+										  <img style="width: 50px; height: 50px;" src="images/food.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="/search?content=零食">零食</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+									<li>
+										<div class="p_left">
+										   <img style="width: 50px; height: 50px;" src="images/baby.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="/search?content=婴儿">婴儿</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+								</ul>	
+							</div>												
+						</div>
+					  </div>
+					</div>
+			</li>
+			<div class="clearfix"> </div>
+		 </ul>
+	  </div>
+	</div>
+</div>
+<div class="index_slider">
+	<div class="container">
+	  <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li><img src="images/slider1.jpg" class="img-responsive" alt=""/></li>
+	        <li><img src="images/2.jpg" class="img-responsive" alt=""/></li>
+	        <li><img src="images/3.jpg" class="img-responsive" alt=""/></li>
+	      </ul>
+	  </div>
+	</div> 
+</div>
+<div class="content_top">
+	<div class="container">
+		<div class="grid_1">
+			<div class="col-md-3">
+			 <div class="box2">
+			 	<ul class="list1">
+			 		<i class="lock"> </i>
+                     <li class="list1_right" style="line-height: 2rem"><p>找惊喜</p></li>
+			 		<div class="clearfix"> </div>
+			 	</ul>
+			 </div>
+			</div>
+			<div class="col-md-3">
+			 <div class="box3">
+			 	<ul class="list1">
+			 		<i class="clock1"> </i>
+			 		<li class="list1_right"><p>秒特价</p></li>
+			 		<div class="clearfix"> </div>
+			 	</ul>
+			 </div>
+			</div>
+			<div class="col-md-3">
+			 <div class="box4">
+			 	<ul class="list1">
+			 		<i class="vehicle"> </i>
+			 		<li class="list1_right"><p>寻福利</p></li>
+			 		<div class="clearfix"> </div>
+			 	</ul>
+			 </div>
+			</div>
+			<div class="col-md-3">
+			 <div class="box5">
+			 	<ul class="list1">
+			 		<i class="dollar"> </i>
+			 		<li class="list1_right"><p>享优惠</p></li>
+			 		<div class="clearfix"> </div>
+			 	</ul>
+			 </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="column_center">
+			<h1>把一分钱，掰成两瓣花 </h1>
+			<h2>Spend a penny for two surprises</h2>
+		</div>
+		<div class="sellers_grid">
+			<ul class="sellers">
+				<i class="star"> </i>
+				<li class="sellers_desc"><h2>实时跑量</h2></li>
+			</ul>
+		</div>
+		<div class="grid_2">
+        <% data.forEach(function(item, index) { %>
+            <div class="col-md-3 span_6" style="margin-top: 20px;">
+                <div class="box_inner">
+                    <a href="/detail?goodsid=<%= item.GoodsID %>" target="_blank"><img src="<%= item.Pic %>" class="img-responsive" alt=""/></a>
+                    <div class="sale-box"> </div>
+                    <div class="desc">
+                        <p style="white-space:nowrap; text-overflow:ellipsis; overflow:hidden; text-align: left; padding: 0px 5px 0px 5px; font-size: 0.9rem; font-weight: 600; color: #583d28;"><%= item.D_title %></p>
+                        
+                        <p style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-align: left; padding: 5px 5px 0px 5px; font-size: 0.8rem; color: #583d28; ">推荐理由: <%= item.Introduce %></p>
+                        
+                        <p style="width: 100%; padding: 5px; color: #e05a5a; ">
+                            <span style="color:#969696; font-size: 0.6rem; float: left;">销量 <%= item.Sales_num %></span>
+                            <span style="font-size: 1rem; float: right; ">佣金 <%= item.Commission %>%</span>
+                        </p>
+                        <div class="clearfix"> </div>
+                        
+                        <p style="width: 100%; padding: 5px; color: #e05a5a;">
+                            <span style="color:#969696; line-height: 1.5rem; text-decoration:line-through; font-size: 0.6rem; float: left;">原价 <%= item.Org_Price %></span>
+                            <span style="float: right;">券后 <%= item.Price %> 元</span>
+                        </p>
+                        <div class="clearfix"> </div>
+                        <ul class="list2" style="margin-top: 15px;">
+                            <li class="list2_right"><span class="m_2"><a href="/detail?goodsid=<%= item.GoodsID %>" target="_blank" class="link1">查看详情</a></span></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!-- <div class="heart"> </div> -->
+                    </div>
+                </div>
+    		    <div class="clearfix"> </div>
+                
+            </div>
+        <% }) %>
+    	<div class="clearfix"> </div>
+		
+		<div style="text-align: center;">
+			<ul class="pagination">
+				<li><a href="/currentGoods?page=<%= parseInt(page) - 1 %>">&laquo;</a></li>
+
+				<% for(var k = 1; k <= 5; k++) { %>
+					<li><a href="/currentGoods?page=<%= k %>"><%= k %></a></li>
+				<% } %>
+				<li><a href="/currentGoods?page=<%= parseInt(page) + 1 %>">&raquo;</a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+</div>
+
+<% include ./myFooter.ejs %>
+
+</body>
+</html>		

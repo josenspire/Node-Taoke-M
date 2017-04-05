@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% include ./include.ejs %>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 50px">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="alert alert-dismissable alert-danger">
+                    <h4>
+                        管理员提示.
+                    </h4>
+                    <br>
+                    <br>
+
+                    <div>
+                        您正在尝试访问管理员界面，请确保您的账户有管理员权限...
+                    </div>
+                    <br>
+                    <div>
+                        You are trying to visit the admin page, please be sure your account have authority...
+                    </div>
+                    <br>
+                    <a class="btn btn-primary" id="logout">注销当前账户</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+	$('#logout').click(function(e) {
+        $.ajax({
+            url: '/users/logout',
+            type: 'get',
+			success: function(data) {
+				window.location.href = "/users/signin"
+			}, 
+		})
+	})
+</script>
+
+</html>

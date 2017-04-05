@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gifty Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../css/style.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../js/jquery.easydropdown.js"></script>
+<link href="../css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <% if (!user) {%>
+							<li><a href="/users/signin">登录</a></li>
+						<% } %>
+						<% if(user) { %>
+							<li><a href="#">欢迎 <%= user.username %></a></li>
+							<li><a href="/users/logout"> 注销</a></li>
+						<% } %>
+                </ul>
+            </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+<div class="header_bottom">
+	<div class="container">
+	 <div class="header_bottom-box">
+		<div class="header_bottom_left">
+			<div class="logo">
+				<a href="index.html"><img src="../images/logo.png" alt=""/></a>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="header_bottom_right">
+			<div class="search">
+			  <input type="text" placeholder="请输入索引关键字" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入索引关键字';}">
+			  <input type="submit" value="">
+	  		</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+</div>
+
+<div class="menu">
+	<div class="container">
+		<div class="menu_box">
+	     <ul class="megamenu skyblue">
+			<li class="grid"><a class="color2" href="/">首页</a></li>
+			<li><a class="color4" href="/topGoods">Top精选</a></li>				
+			<li><a class="color3" href="/currentGoods">实时跑量</a></li>
+			<li><a class="color7" href="#">热门点击</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>WOMEN</h4>
+								<ul>
+									<li><a href="men.html">女装</a></li>
+									<li><a href="men.html">内衣</a></li>
+									<li><a href="men.html">化妆品</a></li>
+									<li><a href="men.html">配饰</a></li>
+									<li><a href="men.html">女鞋</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>MAN</h4>
+								<ul>
+									<li><a href="men.html">男装</a></li>
+									<li><a href="men.html">内裤</a></li>
+									<li><a href="men.html">男鞋</a></li>
+									<li><a href="men.html">剃须刀</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col2">
+							<div class="h_nav">
+								<h4>NORMAL</h4>
+								<ul>
+									<li class>
+										<div class="p_left">
+										   <img style="width: 50px; height: 50px;" src="../images/riyong.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="#">日用品</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+									<li>
+										<div class="p_left">
+										  <img style="width: 50px; height: 50px;" src="../images/food.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="#">零食</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+									<li>
+										<div class="p_left">
+										   <img style="width: 50px; height: 50px;" src="../images/baby.png" class="img-responsive" alt=""/>
+										</div>
+										<div class="p_right">
+											<h4><a href="#">婴儿</a></h4>
+										</div>
+										<div class="clearfix"> </div>
+									</li>
+								</ul>	
+							</div>												
+						</div>
+					  </div>
+					</div>
+			</li>
+			<div class="clearfix"> </div>
+		 </ul>
+	  </div>
+	</div>
+</div>
+
+<div class="men">
+	<div class="container">
+	    <div class="register">
+			   <div class="col-md-6 login-right">
+			  	<h3>尊享用户登录</h3>
+				<p>Please Input Your Inner Account For Log In.</p>
+				<form>
+				  <div>
+					<span>用户名<label>*</label></span>
+					<input type="text" name="username" placeholder="请输入您的用户名">
+				  </div>
+				  <div>
+					<span>密码<label>*</label></span>
+					<input type="password" name="password" placeholder="请输入您的用户密码">
+				  </div>
+                  <span>&nbsp;&nbsp;</span><p id="errorText"></p>
+				  <input type="submit" onclick="Login()" value="登录">
+			    </form>
+			   </div>	
+			   <div class="clearfix"> </div>
+		</div>
+	 </div>
+</div>
+
+<div style="margin-top: 3rem;">
+    <% include ./myFooter %>
+</div>
+</body>
+<script src="./../javascripts/users.js"></script>
+</html>		

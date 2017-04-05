@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>
+        小熊优惠购
+    </title>
+	
+</head>
+
+<body>
+    <div class="header_top">
+        <div class="container">
+            <div class="header_top-box">
+                <div class="header-top-left">
+                    <!--<div class="box">
+                        <select tabindex="4" class="dropdown drop">
+                            <option value="" class="label" value="">小熊推荐</option>
+                            <option value="1">小熊优惠购</option>
+                            <option value="2">优品慧购</option>
+                        </select>
+                    </div>-->
+                    <div class="clearfix"></div>
+                </div>
+                <div class="cssmenu">
+                    <ul>
+                        <!--<li class="active"><a href="login.html">Account</a></li>-->
+                        <!--<li><a href="wishlist.html">Wishlist</a></li>-->
+						<% if (!user) {%>
+							<li><a href="/users/signin">登录</a></li>
+						<% } %>
+						<% if(user) { %>
+							<li><a href="#">欢迎 <%= user.username %></a></li>
+							<li><a href="/users/logout"> 注销</a></li>
+						<% } %>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+	<div class="container">
+	 <div class="header_bottom-box">
+		<div class="header_bottom_left">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			</div>
+			<!--<ul class="clock">
+				<i class="clock_icon"> </i>
+				<li class="clock_desc">Justo 24/h</li>
+			</ul>-->
+			<div class="clearfix"> </div>
+		</div>
+		<div class="header_bottom_right">
+		  <form action="/search" method="GET">
+			<div class="search">
+			  <input name="content" type="text" placeholder="请输入索引关键字" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入索引关键字';}">
+			  <input type="submit" value="">
+	  		</div>
+		  </form>
+	  		<!--<ul class="bag">
+	  			<a href="#"><i class="bag_left"> </i></a>
+	  			<a href="#"><li class="bag_right"><p>205.00 $</p> </li></a>
+	  			<div class="clearfix"> </div>
+	  		</ul>-->
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+</div>
+
+</body>
+
+
+</html>
